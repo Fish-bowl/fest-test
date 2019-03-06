@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import ChatScreen from '../screens/ChatScreen';
+import ProfileScreen from '../screens/ProfileScreen'
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -18,9 +19,22 @@ HomeStack.navigationOptions = {
       focused={focused}
       name={
         Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
+          ? 'home' : 'home'
       }
+    />
+  ),
+};
+
+const ProfileStack = createStackNavigator({
+  Profile: ProfileScreen,
+});
+
+ProfileStack.navigationOptions = {
+  tabBarLabel: 'Profile',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon 
+      focused={focused}
+      name={Platform.OS === 'ios' ? 'person' : 'person-outline'}
     />
   ),
 };
@@ -33,7 +47,7 @@ ChatStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon 
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
+      name={Platform.OS === 'ios' ? 'chat-bubble' : 'chat'}
     />
   ),
 };
@@ -47,13 +61,14 @@ SettingsStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
+      name={Platform.OS === 'ios' ? 'settings' : 'settings'}
     />
   ),
 };
 
 export default createBottomTabNavigator({
   HomeStack,
+  ProfileStack,
   ChatStack,
   SettingsStack,
 });
