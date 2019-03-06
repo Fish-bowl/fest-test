@@ -2,8 +2,8 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 56041,
-  "expoServerNgrokUrl": "https://wg-b8f.anonymous.fest-test.exp.direct",
-  "packagerNgrokUrl": "https://packager.wg-b8f.anonymous.fest-test.exp.direct",
-  "ngrokPid": 56056
+  "packagerPid": 2401,
+  "expoServerNgrokUrl": "https://wg-b8f.defmethod.fest-test.exp.direct",
+  "packagerNgrokUrl": "https://packager.wg-b8f.defmethod.fest-test.exp.direct",
+  "ngrokPid": 2417
 }
