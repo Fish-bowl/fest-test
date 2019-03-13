@@ -8,6 +8,10 @@ import SettingsScreen from '../screens/SettingsScreen';
 import ChatScreen from '../screens/ChatScreen';
 import ProfileScreen from '../screens/ProfileScreen'
 
+const AuthStack = createStackNavigator({
+  SignIn: SignInScreen 
+})
+
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
 });
